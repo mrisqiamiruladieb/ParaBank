@@ -7,8 +7,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class LogIn extends env_target {
-    @Test //successful log in
+public class Login extends env_target {
+    @Test //successful login
     public void main(){
         //Set driver location path
         System.setProperty("webdriver.chrome.driver","src\\main\\resources\\drivers\\chromedriver.exe");
@@ -29,7 +29,7 @@ public class LogIn extends env_target {
         driver.findElement(By.xpath("//input[@type='text'][@class='input'][@name='username']")).sendKeys("moHawks56");
         //Input Password
         driver.findElement(By.xpath("//input[@type='password'][@class='input'][@name='password']")).sendKeys("12345678");
-        //Click Log In Submit Button
+        //Click Login Submit Button
         driver.findElement(By.xpath("//input[@type='submit'][@class='button'][@value='Log In']")).click();
         //Set case stop tunggu
         wait.until(
@@ -39,7 +39,7 @@ public class LogIn extends env_target {
         driver.quit();
     }
 
-    @Test //log in failed
+    @Test //login failed
     public void failed(){
         //Set driver location path
         System.setProperty("webdriver.chrome.driver","src\\main\\resources\\drivers\\chromedriver.exe");
@@ -56,7 +56,7 @@ public class LogIn extends env_target {
                 ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[contains(text(), 'Customer Login')]"))
         );
         //Set element locate
-        //Click Log In Submit Button
+        //Click Login Submit Button
         driver.findElement(By.xpath("//input[@type='submit'][@class='button'][@value='Log In']")).click();
         //Set case stop tunggu
         wait.until(
