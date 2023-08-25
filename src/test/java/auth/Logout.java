@@ -1,3 +1,5 @@
+package auth;
+
 import config.env_target;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -7,8 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class Login extends env_target {
-    @Test //successful login
+public class Logout extends env_target {
+    @Test //successful logout
     public void main(){
         //Set driver location path
         System.setProperty("webdriver.chrome.driver","src\\main\\resources\\drivers\\chromedriver.exe");
@@ -33,34 +35,14 @@ public class Login extends env_target {
         driver.findElement(By.xpath("//input[@type='submit'][@class='button'][@value='Log In']")).click();
         //Set case stop tunggu
         wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class='title'][contains(text(), 'Accounts Overview')]"))
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@href, '/parabank/logout.htm')]"))
         );
-        //Quit chrome
-        driver.quit();
-    }
-
-    @Test //login failed
-    public void failed(){
-        //Set driver location path
-        System.setProperty("webdriver.chrome.driver","src\\main\\resources\\drivers\\chromedriver.exe");
-        //Maximize driver
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        //Set url
-        driver.get(baseUrl);
-        //Set waktu tunggu
-        Duration duration = Duration.ofSeconds(10);
-        WebDriverWait wait = new WebDriverWait(driver, duration);
+        //Set element locate
+        //Click Logout button
+        driver.findElement(By.xpath("//a[contains(@href, '/parabank/logout.htm')]")).click();
         //Set case stop tunggu
         wait.until(
                 ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[contains(text(), 'Customer Login')]"))
-        );
-        //Set element locate
-        //Click Login Submit Button
-        driver.findElement(By.xpath("//input[@type='submit'][@class='button'][@value='Log In']")).click();
-        //Set case stop tunggu
-        wait.until(
-                ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='error'][contains(text(), 'Please enter a username and password.')]"))
         );
         //Quit chrome
         driver.quit();

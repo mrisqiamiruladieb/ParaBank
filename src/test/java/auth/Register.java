@@ -1,3 +1,5 @@
+package auth;
+
 import config.env_target;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -48,7 +50,7 @@ public class Register extends env_target {
         //Input SSN
         driver.findElement(By.name("customer.ssn")).sendKeys("12321");
         //Input Username
-        driver.findElement(By.id("customer.username")).sendKeys("moHawks58");
+        driver.findElement(By.id("customer.username")).sendKeys("moHawks56");
         //Input Password
         driver.findElement(By.name("customer.password")).sendKeys("12345678");
         //Input Confirm Password
