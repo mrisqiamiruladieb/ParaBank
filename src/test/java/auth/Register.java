@@ -27,6 +27,7 @@ public class Register extends env_target {
                 ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@href, 'register.htm')]"))
         );
         //Set element locate
+        //Click Register Button
         driver.findElement(By.xpath("//a[contains(@href, 'register.htm')]")).click();
         //Set case stop tunggu
         wait.until(
