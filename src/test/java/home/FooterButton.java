@@ -238,5 +238,245 @@ public class FooterButton extends env_target {
         driver.findElement(By.xpath("//a[contains(@href, 'soatest.pfx')]")).click();
         //Verify Download Method
         Assertions.assertTrue(FileUtil.isFileDownloaded("soatest", "pfx", 5000));
+        //Quit chrome
+        driver.quit();
+    }
+
+    @Test
+    public void services_bookstore_soap_store_wss_02(){
+        //Set driver location path
+        System.setProperty("webdriver.chrome.driver","src\\main\\resources\\drivers\\chromedriver.exe");
+        //Maximize driver
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        //Set url
+        driver.get(baseUrl);
+        //Set waktu tunggu
+        Duration duration = Duration.ofSeconds(10);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a"))
+        );
+        //Set element locate
+        //Click Services Button
+        driver.findElement(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@href, 'https://parabank.parasoft.com/parabank/services/store-wss-02?wsdl')]"))
+        );
+        //Set element locate
+        //Click Link store-wss-02
+        driver.findElement(By.xpath("//a[contains(@href, 'https://parabank.parasoft.com/parabank/services/store-wss-02?wsdl')]")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.urlToBe("https://parabank.parasoft.com/parabank/services/store-wss-02?wsdl")
+        );
+        //Quit chrome
+        driver.quit();
+    }
+
+    @Test
+    public void services_bookstore_soap_store_wss_03(){
+        //Set driver location path
+        System.setProperty("webdriver.chrome.driver","src\\main\\resources\\drivers\\chromedriver.exe");
+        //Maximize driver
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        //Set url
+        driver.get(baseUrl);
+        //Set waktu tunggu
+        Duration duration = Duration.ofSeconds(10);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a"))
+        );
+        //Set element locate
+        //Click Services Button
+        driver.findElement(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@href, 'https://parabank.parasoft.com/parabank/services/store-wss-03?wsdl')]"))
+        );
+        //Set element locate
+        //Click Link store-wss-03
+        driver.findElement(By.xpath("//a[contains(@href, 'https://parabank.parasoft.com/parabank/services/store-wss-03?wsdl')]")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.urlToBe("https://parabank.parasoft.com/parabank/services/store-wss-03?wsdl")
+        );
+        //Quit chrome
+        driver.quit();
+    }
+
+    @Test
+    public void services_bookstore_soap_store_wss_04(){
+        //Set driver location path
+        System.setProperty("webdriver.chrome.driver","src\\main\\resources\\drivers\\chromedriver.exe");
+        //Maximize driver
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        //Set url
+        driver.get(baseUrl);
+        //Set waktu tunggu
+        Duration duration = Duration.ofSeconds(10);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a"))
+        );
+        //Set element locate
+        //Click Services Button
+        driver.findElement(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@href, 'https://parabank.parasoft.com/parabank/services/store-wss-04?wsdl')]"))
+        );
+        //Set element locate
+        //Click Link store-wss-04
+        driver.findElement(By.xpath("//a[contains(@href, 'https://parabank.parasoft.com/parabank/services/store-wss-04?wsdl')]")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.urlToBe("https://parabank.parasoft.com/parabank/services/store-wss-04?wsdl")
+        );
+        //Quit chrome
+        driver.quit();
+    }
+
+    @Test
+    public void services_parabank_soap_loan_processor(){
+        //Set driver location path
+        System.setProperty("webdriver.chrome.driver","src\\main\\resources\\drivers\\chromedriver.exe");
+        //Maximize driver
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        //Set url
+        driver.get(baseUrl);
+        //Set waktu tunggu
+        Duration duration = Duration.ofSeconds(10);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a"))
+        );
+        //Set element locate
+        //Click Services Button
+        driver.findElement(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[contains(@href, 'https://parabank.parasoft.com/parabank/services/LoanProcessor?wsdl')]"))
+        );
+        //Set element locate
+        //Click Link LoanProcessor
+        driver.findElement(By.xpath("//a[contains(@href, 'https://parabank.parasoft.com/parabank/services/LoanProcessor?wsdl')]")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.urlToBe("https://parabank.parasoft.com/parabank/services/LoanProcessor?wsdl")
+        );
+        //Quit chrome
+        driver.quit();
+    }
+
+    @Test
+    public void services_parabank_soap_parabank(){
+        //Set driver location path
+        System.setProperty("webdriver.chrome.driver","src\\main\\resources\\drivers\\chromedriver.exe");
+        //Maximize driver
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        //Set url
+        driver.get(baseUrl);
+        //Set waktu tunggu
+        Duration duration = Duration.ofSeconds(10);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a"))
+        );
+        //Set element locate
+        //Click Services Button
+        driver.findElement(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='rightPanel']/table[3]/tbody/tr[2]/td[2]/a"))
+        );
+        //Set element locate
+        //Click Link ParaBank
+        driver.findElement(By.xpath("//*[@id='rightPanel']/table[3]/tbody/tr[2]/td[2]/a")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.urlToBe("https://parabank.parasoft.com/parabank/services/ParaBank?wsdl")
+        );
+        //Quit chrome
+        driver.quit();
+    }
+
+    @Test
+    public void services_restful_wadl(){
+        //Set driver location path
+        System.setProperty("webdriver.chrome.driver","src\\main\\resources\\drivers\\chromedriver.exe");
+        //Maximize driver
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        //Set url
+        driver.get(baseUrl);
+        //Set waktu tunggu
+        Duration duration = Duration.ofSeconds(10);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a"))
+        );
+        //Set element locate
+        //Click Services Button
+        driver.findElement(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='rightPanel']/table[5]/tbody/tr/td/a[1]"))
+        );
+        //Set element locate
+        //Click Link wadl
+        driver.findElement(By.xpath("//*[@id='rightPanel']/table[5]/tbody/tr/td/a[1]")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.urlToBe("https://parabank.parasoft.com/parabank/services/bank?_wadl&_type=xml")
+        );
+        //Quit chrome
+        driver.quit();
+    }
+
+    @Test
+    public void services_restful_swagger(){
+        //Set driver location path
+        System.setProperty("webdriver.chrome.driver","src\\main\\resources\\drivers\\chromedriver.exe");
+        //Maximize driver
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        //Set url
+        driver.get(baseUrl);
+        //Set waktu tunggu
+        Duration duration = Duration.ofSeconds(10);
+        WebDriverWait wait = new WebDriverWait(driver, duration);
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a"))
+        );
+        //Set element locate
+        //Click Services Button
+        driver.findElement(By.xpath("//*[@id='footerPanel']/ul[1]/li[3]/a")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='rightPanel']/table[5]/tbody/tr/td/a[1]"))
+        );
+        //Set element locate
+        //Click Link swagger
+        driver.findElement(By.xpath("//*[@id='rightPanel']/table[5]/tbody/tr/td/a[2]")).click();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.urlToBe("https://parabank.parasoft.com/parabank/api-docs/index.html")
+        );
+        //Quit chrome
+        driver.quit();
     }
 }
