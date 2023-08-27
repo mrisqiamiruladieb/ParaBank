@@ -1,13 +1,20 @@
 package home;
 
 import config.env_target;
+import util.FileUtil;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.io.IOException;
+import java.util.Map;
+import java.util.HashMap;
+import java.io.File;
 
 public class FooterButton extends env_target {
     @Test
@@ -193,14 +200,24 @@ public class FooterButton extends env_target {
         driver.quit();
     }
 
-    @Test //referensi : https://www.programsbuzz.com/article/how-verify-file-download-selenium-webdriver-java
-    public void services_bookstore_soap_download_soatest_pfx(){
+    @Test
+    public void services_bookstore_soap_download_soatest_pfx() throws InterruptedException, IOException
+    {
         //Set driver location path
         System.setProperty("webdriver.chrome.driver","src\\main\\resources\\drivers\\chromedriver.exe");
+        //Change Download Directory
+        //Setting new download directory path
+        Map<String, Object> prefs = new HashMap<String, Object>();
+        //Use File.separator as it will work on any OS
+        prefs.put("download.default_directory", System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator + "drivers" + File.separator + "BrowserDownloadedFiles");
+        //Adding cpabilities to ChromeOptions
+        ChromeOptions options = new ChromeOptions();
+        options.setExperimentalOption("prefs", prefs);
+        // Launching browser with desired capabilities
+        driver = new ChromeDriver(options);
         //Maximize driver
-        driver = new ChromeDriver();
         driver.manage().window().maximize();
-        //Set url
+        //url loading
         driver.get(baseUrl);
         //Set waktu tunggu
         Duration duration = Duration.ofSeconds(10);
@@ -219,6 +236,7 @@ public class FooterButton extends env_target {
         //Set element locate
         //Click download file link button
         driver.findElement(By.xpath("//a[contains(@href, 'soatest.pfx')]")).click();
-
+        //Verify Download Method
+        Assertions.assertTrue(FileUtil.isFileDownloaded("soatest", "pfx", 5000));
     }
 }
