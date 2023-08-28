@@ -26,3 +26,10 @@ Web Automation <br>
 <li>Pada <u>case</u> <b>services_bookstore_soap_download_soatest_pfx (test method)</b> pada src/test/java/home/<b>FooterButton.java</b></li>
 <li>Tambahkan import util.FileUtil; import org.junit.jupiter.api.Assertions; import java.io.IOException;</li>
 <li>Sesuaikan code dengan <u>Referensi</u></li>
+
+<h4>3. Switch/Tab Window</h4>
+<li><u>Referensi 1</u> : https://www.programsbuzz.com/article/handle-multiple-windows-or-tabs-selenium-java</li>
+<li><u>Referensi 2</u> : http://makeseleniumeasy.com/2020/11/05/does-getwindowhandles-method-return-handles-in-the-same-order-as-windows-launch/</li>
+<li><u>Case</u> : <b>visit_us_at (test method)</b> pada src/test/java/home/<b>FooterButton.java</b></li>
+<li>Tambahkan import java.util.Set;</li>
+<li>Sesuaikan code dengan <u>Referensi</u></li>

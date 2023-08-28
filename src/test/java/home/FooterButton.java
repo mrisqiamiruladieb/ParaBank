@@ -13,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.io.IOException;
 import java.util.Map;
+import java.util.Set;
 import java.util.HashMap;
 import java.io.File;
 
@@ -1092,6 +1093,22 @@ public class FooterButton extends env_target {
         //Set case stop tunggu
         wait.until(
                 ExpectedConditions.numberOfWindowsToBe(2)
+        );
+        //Get main window handle
+        String mainWindow = driver.getWindowHandle();
+        //Get all window handles
+        Set<String> allWindow = driver.getWindowHandles();
+        //Switch window
+        for (String handle : allWindow){
+            if (!handle.equals(mainWindow)){
+                driver.switchTo().window(handle);
+            }
+        }
+        //Store window title
+        String title = driver.getTitle();
+        //Set case stop tunggu
+        wait.until(
+                ExpectedConditions.titleIs(title)
         );
         //Quit chrome
         driver.quit();
