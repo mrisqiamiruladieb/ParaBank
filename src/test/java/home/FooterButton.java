@@ -62,7 +62,7 @@ public class FooterButton extends env_target {
                 ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='footerPanel']/ul[1]/li[2]/a"))
         );
         //Set element locate
-        //Click Home Button
+        //Click About Us Button
         driver.findElement(By.xpath("//*[@id='footerPanel']/ul[1]/li[2]/a")).click();
         //Set case stop tunggu
         wait.until(
