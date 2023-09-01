@@ -33,3 +33,9 @@ Web Automation <br>
 <li><u>Case</u> : <b>visit_us_at (test method)</b> pada src/test/java/home/<b>FooterButton.java</b></li>
 <li>Tambahkan import java.util.Set;</li>
 <li>Sesuaikan code dengan <u>Referensi</u></li>
+
+### Tips and Tricks
+___
+#### 1. Resolving Dependencies
+- `Referensi` : [Klik di sini](https://stackoverflow.com/questions/42488035/intellij-idea-does-not-recognise-maven-dependencies-omitted-for-conflict-with)  
+- `Di aplikasi` : Pilih __File &rarr; Invalidate Caches &rarr; Invalidate and Restart__
