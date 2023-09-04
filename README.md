@@ -39,3 +39,9 @@ ___
 #### 1. Resolving Dependencies
 - `Referensi` : [Klik di sini](https://stackoverflow.com/questions/42488035/intellij-idea-does-not-recognise-maven-dependencies-omitted-for-conflict-with)  
 - `Di aplikasi` : Pilih __File &rarr; Invalidate Caches &rarr; Invalidate and Restart__
+#### 2. Resolving cannot resolve symbol
+- `Case 1` : _Assertions_ &rarr; __import org.junit.jupiter.api.Assertions;__ di src/main/java/stepDef/__FooterButtonBdd.java__
+  - `Solution` : _Delete_ `<scope>test</scope>` dalam __dependency__ di __pom.xml__
+  - `Referensi` : [Klik di sini](https://stackoverflow.com/questions/54393445/cannot-resolve-symbol-assertions-error-message-when-trying-to-use-assertj)
+- `Case 2` : _FileUtil_ &rarr; __import util.FileUtil;__ di src/main/java/stepDef/__FooterButtonBdd.java__
+  - `Solution` : _Copy_ src/test/java/util/__FileUtil.java__ ke src/main/java/util/__FileUtil.java__
