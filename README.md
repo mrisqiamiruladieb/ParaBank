@@ -45,3 +45,4 @@ ___
   - `Referensi` : [Klik di sini](https://stackoverflow.com/questions/54393445/cannot-resolve-symbol-assertions-error-message-when-trying-to-use-assertj)
 - `Case 2` : _FileUtil_ &rarr; __import util.FileUtil;__ di src/main/java/stepDef/__FooterButtonBdd.java__
   - `Solution` : _Copy_ src/test/java/util/__FileUtil.java__ ke src/main/java/util/__FileUtil.java__
+  - `Note` : File dari `src/test/java/...` bisa __akses package class__ dari `src/main/java/...` (__tidak bisa sebaliknya__)
