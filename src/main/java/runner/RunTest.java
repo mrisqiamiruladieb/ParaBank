@@ -8,7 +8,7 @@ import io.cucumber.junit.Cucumber;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "stepDef",
-        tags = "@FooterButtonBdd",
+        tags = "@HeaderButtonBdd",
         plugin = {"pretty", "html:target/RegressionReport.html"}
 )
 
